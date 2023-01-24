@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.main`
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   width: 100%;
   margin: 5rem auto;
 
@@ -18,7 +18,6 @@ export const HomeContainer = styled.main`
   }
 
   h1 {
-    font-family: 'Baloo 2', cursive;
     font-weight: 700;
     line-height: 130%;
     font-size: 3rem;
@@ -72,7 +71,9 @@ export const HomeContainer = styled.main`
     width: 1.7rem;
     height: 1.7rem;
     padding: 5px;
-
+  }
+  .CoffeeContainerStyle {
+    background: ${(props) => props.theme.background};
   }
 
 `

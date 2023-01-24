@@ -2,6 +2,7 @@ import { HomeContainer } from "./Styles";
 import ImgBanner from '../assets/img/ImgBanner.svg'
 import ImgBack from '../assets/img/Background.svg'
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
+import { CoffeeContainer } from "../components/Coffees";
 
 export function Home() {
   return (
@@ -32,6 +33,10 @@ export function Home() {
           <img src={ImgBanner} alt="" />
         </article>
       </div>
+      <div className="CoffeeContainerStyle">
+        <CoffeeContainer />
+      </div>
     </HomeContainer >
+
   )
 }
