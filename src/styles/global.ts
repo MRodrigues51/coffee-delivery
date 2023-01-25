@@ -19,6 +19,9 @@ export const GlobalStyle = createGlobalStyle`
     h1, h2 {
       font-family: 'Baloo 2', cursive;
     }
+    p {
+      color: ${(props) => props.theme['base-label']}
+    }
     body, input, textarea, button {
         font-family: 'Roboto', sans-serif;
         font-weight: 400;
