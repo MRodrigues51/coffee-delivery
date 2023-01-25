@@ -9,7 +9,6 @@ export const CoffeeContainerDiv = styled.div`
   }
   main {
     display: flex;
-    /* align-items: center; */
     justify-content: left;
     flex-wrap: wrap;
 
