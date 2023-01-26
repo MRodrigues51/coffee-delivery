@@ -1,30 +1,36 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react"
-import imgCoffee from '../../assets/img/Coffee.png'
+import imgCoffeeTrad from '../../assets/img/coffee/CoffeeTrad.png'
+import imgCoffeeAmer from '../../assets/img/coffee/CoffeeAmer.png'
+import imgCoffeeCream from '../../assets/img/coffee/CoffeeCream.png'
+import imgCoffeeIce from '../../assets/img/coffee/CoffeeIce.png'
 import { useState } from "react"
 import { CoffeeContainerDiv } from "./styles"
 
 export function CoffeeContainer() {
   const [coffee] = useState([{
     "id": 1,
-    "photo": { imgCoffee },
+    "photo": imgCoffeeTrad,
     "type": "tradicional",
     "title": "Expresso Tradicional",
     "body": "O tradicional café feito com água quente e grãos moídos"
   },
   {
     "id": 2,
+    "photo": imgCoffeeAmer,
     "type": "tradicional",
     "title": "Expresso Americano",
     "body": "Expresso diluído, menos intenso que o tradicional"
   },
   {
     "id": 3,
+    "photo": imgCoffeeCream,
     "type": "tradicional",
     "title": "Expresso Cremoso",
     "body": "Café expresso tradicional com espuma cremosa"
   },
   {
     "id": 4,
+    "photo": imgCoffeeIce,
     "type": "tradicional",
     "title": "Expresso Gelado",
     "body": "Bebida preparada com café expresso e cubos de gelo"
@@ -94,10 +100,12 @@ export function CoffeeContainer() {
 
   const content = coffee.map((list) =>
   (
+    // console.log(list.photo)
     <>
       <div className="ListCard">
         <div className="Card">
-          <img src={imgCoffee} alt="" />
+
+          <img src={list.photo} alt="" />
           <pre>{list.type}</pre>
           <h2>{list.title}</h2>
           <p>{list.body}</p>
