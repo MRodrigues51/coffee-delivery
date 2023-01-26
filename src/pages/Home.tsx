@@ -26,7 +26,7 @@ export function Home() {
           </div>
           <div className="itemsAlign">
             <span><Timer className="Timer" size={16} weight="fill" /> Entrega rápida e rastreada</span>
-            <span><Coffee className="Coffee" size={16} weight="fill" /> O café chega frenquinho até você</span>
+            <span><Coffee className="Coffee" size={16} weight="fill" /> O café chega fresquinho até você</span>
           </div>
         </main>
         <article>

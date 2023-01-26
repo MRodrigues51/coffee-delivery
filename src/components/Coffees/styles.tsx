@@ -21,7 +21,7 @@ export const CoffeeContainerDiv = styled.div`
     text-align: center;
     gap: 1rem;
     border-radius: 5px;
-    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    /* box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22); */
     padding: 30px;
     margin: 20px;
 

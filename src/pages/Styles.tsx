@@ -44,33 +44,33 @@ export const HomeContainer = styled.main`
     background: ${(props) => props.theme["yellow-dark"]};
     color: ${(props) => props.theme["white"]};
     border-radius: 50%;
-    width: 1.7rem;
-    height: 1.7rem;
-    padding: 5px;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 6px;
   }
   .Package {
     background: ${(props) => props.theme["base-text"]};
     color: ${(props) => props.theme["white"]};
     border-radius: 50%;
-    width: 1.7rem;
-    height: 1.7rem;
-    padding: 5px;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 6px;
   }
   .Timer {
     background: ${(props) => props.theme["yellow"]};
     color: ${(props) => props.theme["white"]};
     border-radius: 50%;
-    width: 1.7rem;
-    height: 1.7rem;
-    padding: 5px;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 6px;
   }
   .Coffee {
     background: ${(props) => props.theme["purple"]};
     color: ${(props) => props.theme["white"]};
     border-radius: 50%;
-    width: 1.7rem;
-    height: 1.7rem;
-    padding: 5px;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 6px;
   }
   .CoffeeContainerStyle {
     background: ${(props) => props.theme.background};
