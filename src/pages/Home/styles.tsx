@@ -8,9 +8,9 @@ export const HomeContainer = styled.main`
   margin: 5rem auto;
 
   div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .BannerBegin{
     padding: 0 3rem 5rem 3rem;

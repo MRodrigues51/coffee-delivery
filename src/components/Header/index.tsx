@@ -8,6 +8,7 @@ export function Header() {
     <HeaderContainer>
       <img src={logoCoffeeDelivery} alt="" />
       <nav>
+
         <span><i><MapPin size={28} weight='fill' /></i>Crato, CE</span>
 
         <NavLink to='/cart' title='Cart'>
