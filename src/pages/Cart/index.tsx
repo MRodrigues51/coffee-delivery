@@ -3,19 +3,18 @@ import { CartContainer } from "./styles";
 export function Cart() {
   return (
     <CartContainer>
-      <div>
+      <div className="containerBox">
         <main>
           <h2>Complete seu pedido</h2>
+          <div className="divHeader">
+            <h3>
+              Endereço de entrega
+            </h3>
+            <p>
+              Informe o endereço onde desejar receber seu pedido
+            </p>
+          </div>
           <div>
-            <div className="divHeader">
-              <h3>
-                Endereço de entrega
-              </h3>
-              <p>
-                Informe o endereço onde desejar receber seu pedido
-              </p>
-            </div>
-
             <form action="">
               <div className="divFormRowOne">
                 <input type="text" placeholder="CEP" />

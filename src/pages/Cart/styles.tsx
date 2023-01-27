@@ -4,15 +4,22 @@ export const CartContainer = styled.div`
   width: 100%;
   margin: 5rem auto;
 
-  div {
+  .containerBox {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+  }
+  .containerBox form {
+    /* gap: 100px; */
+    background: black;
   }
   main {
     background: orange;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
   }
   article {
     background: teal;
@@ -23,12 +30,17 @@ export const CartContainer = styled.div`
     border-radius: 8px;
     height: 40px;
     padding: 4px;
+
   }
   form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    gap: 6px;
     margin: 20px;
   }
   form div {
-    margin-top: 6px;
+    /* margin-top: 6px; */
     gap: 6px;
   }
   .divFormRowOne input {
@@ -37,6 +49,7 @@ export const CartContainer = styled.div`
   .divFormRowTwo input {
     width: 100%;
   }
+
   .divFormRowThree .inputNumber {
     width: 40%;
   }
@@ -53,8 +66,11 @@ export const CartContainer = styled.div`
     width: 20%;
   }
   .divHeader {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    text-align: start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start; */
   }
+
 `
