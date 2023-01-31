@@ -24,7 +24,11 @@ export const CartContainer = styled.div`
 
   }
   article {
-    background: teal;
+    /* background: teal; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
   }
   input {
     background: ${(props) => props.theme["base-input"]};
@@ -110,12 +114,12 @@ export const CartContainer = styled.div`
   .PayDivButton button {
     border: 0;
     border-radius: 8px;
-    padding: 10px;
+    padding: 1.2rem;
     text-transform: uppercase;
     color: ${(props) => props.theme["base-text"]};
     background: ${(props) => props.theme["base-button"]};
     display: flex;
-    gap: 6px;
+    gap: 10px;
   }
    i {
     color: ${(props) => props.theme.purple};
@@ -123,4 +127,41 @@ export const CartContainer = styled.div`
   .divHeader i {
     color: ${(props) => props.theme["yellow-dark"]};
   }
+
+
+  button {
+  padding:0;
+  border: 0px;
+  padding-left:0;
+  padding-right:0;
+  outline:none;
+  cursor: pointer;
+  margin-bottom: 7%;
+  }
+  button.a{
+    margin: 0;
+    width: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    color: ${(props) => props.theme['purple']};
+  }
+  button.b{
+    margin: 0;
+    padding-right: 5px;
+    display: flex;
+    width: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    color: ${(props) => props.theme['purple']};
+  }
+  .AddRemoveItensCart {
+    background-color: ${(props) => props.theme['base-button']};
+    border-radius: 8px;
+    width: auto;
+    padding: 2.5%;
+  }
+
 `

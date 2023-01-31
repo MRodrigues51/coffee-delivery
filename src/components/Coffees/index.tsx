@@ -117,11 +117,33 @@ export function CoffeeContainer() {
     "body": "Bebida a base de café, uísque irlândes, açúcar e chantilly"
   }
   ]);
-  console.log(coffee)
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [inputValues, setInputValues] = useState<Record<number, number>>({});
 
-  const content = coffee.map((list) =>
+  const [count, setCount] = useState<number>(0)
+  console.log(count)
+
+  const handleMinus = (index: number) => {
+    setSelectedIndex(index);
+    setInputValues({ ...inputValues, [index]: inputValues[index] - 1 });
+    setCount(count - 1)
+    console.log('Esse é o index' + index)
+  };
+  console.log('esse é o console de menos' + count);
+
+  const handlePlus = (index: number) => {
+    setSelectedIndex(index);
+    setInputValues({ ...inputValues, [index]: inputValues[index] + 1 });
+    setCount(count + 1)
+    console.log('esse é o outro index' + index)
+  };
+  console.log('esse é o console de mais' + count);
+
+  console.log(inputValues)
+
+  const content = coffee.map((list, index) =>
+
   (
-    // console.log(list.photo)
     <>
       <div className="ListCard">
         <div className="Card">
@@ -135,10 +157,20 @@ export function CoffeeContainer() {
               <p>R$</p>
               <label>9,90</label>
             </span>
-            <span className="BackgroundInput">
-              <button className="a"><Minus weight="bold" /></button>
-              <input type="number" />
-              <button className="b"><Plus weight="bold" /></button>
+            <span key={list.id} className="BackgroundInput">
+              <button
+                className="a"
+                // key={list.id}
+                onClick={() => handleMinus(index)}>
+                <Minus weight="bold" />
+              </button>
+              <input type="number" value={selectedIndex === index ? inputValues[index] || 0 : 0} />
+              <button
+                className="b"
+                // key={index}
+                onClick={() => handlePlus(index)}>
+                <Plus weight="bold" />
+              </button>
             </span>
             <button className="CartPrice"><ShoppingCart weight="fill" size={28} /></button>
           </div>

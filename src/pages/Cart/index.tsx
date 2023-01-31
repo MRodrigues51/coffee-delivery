@@ -1,7 +1,28 @@
-import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
+import { Bank, CodeSimple, CreditCard, CurrencyDollar, MapPinLine, Minus, Money, Plus, Trash } from "phosphor-react";
+import { useState } from "react";
 import { CartContainer } from "./styles";
 
 export function Cart() {
+
+  const items = [
+    { id: 1, name: "john" },
+    { id: 2, name: "Paul" },
+    { id: 3, name: "Ringo" },
+  ]
+
+  function CounterButton() {
+
+    const [count, setCount] = useState(0);
+
+    return (
+      <div>
+        <button onClick={() => setCount(count - 1)}>-</button>
+        <div>{count}</div>
+        <button onClick={() => setCount(count + 1)}>+</button>
+      </div>
+    )
+  }
+
   return (
     <CartContainer>
       <div className="containerBox">
@@ -49,6 +70,30 @@ export function Cart() {
         </main>
         <article>
           <h2>Cafés selecionados</h2>
+          <div>
+            <img src="" alt="" />
+
+            <span>
+              <h2>Expresso Tradicional</h2>
+              <label htmlFor="">R$ 9,90</label>
+            </span>
+            <span className="AddRemoveItensCart">
+              <button className="a"><Minus weight="bold" /></button>
+              <input type="number" />
+              <button className="b"><Plus weight="bold" /></button>
+              <button><Trash /> remover</button>
+            </span>
+          </div>
+
+          <div>
+            tentativa contador
+            {items.map(item => (
+              <div key={item.id}>
+                {item.name}
+                <CounterButton />
+              </div>
+            ))}
+          </div>
         </article>
 
       </div>
