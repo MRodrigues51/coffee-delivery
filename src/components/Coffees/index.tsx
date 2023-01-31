@@ -139,7 +139,7 @@ export function CoffeeContainer() {
   };
   console.log('esse é o console de mais' + count);
 
-  console.log(inputValues)
+  console.log(selectedIndex)
 
   const content = coffee.map((list, index) =>
 
@@ -164,8 +164,9 @@ export function CoffeeContainer() {
                 onClick={() => handleMinus(index)}>
                 <Minus weight="bold" />
               </button>
-              <input type="number" value={selectedIndex === index ? inputValues[index] || 0 : 0} />
+              <input type="number" value={selectedIndex !== index ? inputValues[index] || 0 : count} />
               <button
+
                 className="b"
                 // key={index}
                 onClick={() => handlePlus(index)}>
